@@ -2,3 +2,5 @@ target
 */target
 *.bak
 */*.bak
+CMakeProject1
+*/CMakeProject1
