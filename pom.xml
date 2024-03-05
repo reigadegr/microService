@@ -19,6 +19,9 @@
     </parent>
 
     <properties>
+        <maven.compiler.source>8</maven.compiler.source>
+        <maven.compiler.target>8</maven.compiler.target>
+        <kotlin.version>1.9.22</kotlin.version>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
         <java.version>1.8</java.version>
@@ -29,15 +32,18 @@
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-web</artifactId>
         </dependency>
+        
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-logging</artifactId>
         </dependency>
+        
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-test</artifactId>
             <scope>test</scope>
         </dependency>
+        
         <dependency>
             <groupId>org.projectlombok</groupId>
             <artifactId>lombok</artifactId>
@@ -52,59 +58,140 @@
             <type>pom</type>
             <scope>import</scope>
         </dependency>
+
+        <dependency>
+            <groupId>com.mysql</groupId>
+            <artifactId>mysql-connector-j</artifactId>
+            <version>8.0.33</version>
+        </dependency>
+        
+        <dependency>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
+            <scope>provided</scope>
+        </dependency>
+        
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-data-jpa</artifactId>
+        </dependency>
+        
+        <dependency>
+            <groupId>org.jetbrains.kotlin</groupId>
+            <artifactId>kotlin-stdlib-jdk8</artifactId>
+            <version>${kotlin.version}</version>
+        </dependency>
+        
+        <dependency>
+            <groupId>org.jetbrains.kotlin</groupId>
+            <artifactId>kotlin-test</artifactId>
+            <version>${kotlin.version}</version>
+            <scope>test</scope>
+        </dependency>
     </dependencies>
     <!-- </dependencyManagement> -->
 
-    <repositories>
-        <repository>
-            <id>spring-snapshots</id>
-            <name>Spring Snapshots</name>
-            <url>http://repo.spring.io/libs-snapshot-local</url>
-            <snapshots>
-                <enabled>true</enabled>
-            </snapshots>
-        </repository>
-        <repository>
-            <id>spring-milestones</id>
-            <name>Spring Milestones</name>
-            <url>http://repo.spring.io/libs-milestone-local</url>
-            <snapshots>
-                <enabled>false</enabled>
-            </snapshots>
-        </repository>
-        <repository>
-            <id>spring-releases</id>
-            <name>Spring Releases</name>
-            <url>http://repo.spring.io/libs-release-local</url>
-            <snapshots>
-                <enabled>false</enabled>
-            </snapshots>
-        </repository>
-    </repositories>
-    <pluginRepositories>
-        <pluginRepository>
-            <id>spring-snapshots</id>
-            <name>Spring Snapshots</name>
-            <url>http://repo.spring.io/libs-snapshot-local</url>
-            <snapshots>
-                <enabled>true</enabled>
-            </snapshots>
-        </pluginRepository>
-        <pluginRepository>
-            <id>spring-milestones</id>
-            <name>Spring Milestones</name>
-            <url>http://repo.spring.io/libs-milestone-local</url>
-            <snapshots>
-                <enabled>false</enabled>
-            </snapshots>
-        </pluginRepository>
-    </pluginRepositories>
+    <!-- <repositories> -->
+    <!-- <repository> -->
+    <!-- <id>spring-snapshots</id> -->
+    <!-- <name>Spring Snapshots</name> -->
+    <!-- <url>http://repo.spring.io/libs-snapshot-local</url> -->
+    <!-- <snapshots> -->
+    <!-- <enabled>true</enabled> -->
+    <!-- </snapshots> -->
+    <!-- </repository> -->
+    <!-- <repository> -->
+    <!-- <id>spring-milestones</id> -->
+    <!-- <name>Spring Milestones</name> -->
+    <!-- <url>http://repo.spring.io/libs-milestone-local</url> -->
+    <!-- <snapshots> -->
+    <!-- <enabled>false</enabled> -->
+    <!-- </snapshots> -->
+    <!-- </repository> -->
+    <!-- <repository> -->
+    <!-- <id>spring-releases</id> -->
+    <!-- <name>Spring Releases</name> -->
+    <!-- <url>http://repo.spring.io/libs-release-local</url> -->
+    <!-- <snapshots> -->
+    <!-- <enabled>false</enabled> -->
+    <!-- </snapshots> -->
+    <!-- </repository> -->
+    <!-- </repositories> -->
+    <!-- <pluginRepositories> -->
+    <!-- <pluginRepository> -->
+    <!-- <id>spring-snapshots</id> -->
+    <!-- <name>Spring Snapshots</name> -->
+    <!-- <url>http://repo.spring.io/libs-snapshot-local</url> -->
+    <!-- <snapshots> -->
+    <!-- <enabled>true</enabled> -->
+    <!-- </snapshots> -->
+    <!-- </pluginRepository> -->
+    <!-- <pluginRepository> -->
+    <!-- <id>spring-milestones</id> -->
+    <!-- <name>Spring Milestones</name> -->
+    <!-- <url>http://repo.spring.io/libs-milestone-local</url> -->
+    <!-- <snapshots> -->
+    <!-- <enabled>false</enabled> -->
+    <!-- </snapshots> -->
+    <!-- </pluginRepository> -->
+    <!-- </pluginRepositories> -->
 
     <build>
         <plugins>
             <plugin>
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-maven-plugin</artifactId>
+            </plugin>
+
+            <plugin>
+                <groupId>org.jetbrains.kotlin</groupId>
+                <artifactId>kotlin-maven-plugin</artifactId>
+                <version>${kotlin.version}</version>
+                <executions>
+                    <execution>
+                        <id>compile</id>
+                        <phase>compile</phase>
+                        <goals>
+                            <goal>compile</goal>
+                        </goals>
+                    </execution>
+                    <execution>
+                        <id>test-compile</id>
+                        <phase>test-compile</phase>
+                        <goals>
+                            <goal>test-compile</goal>
+                        </goals>
+                    </execution>
+                </executions>
+                <configuration>
+                    <jvmTarget>1.8</jvmTarget>
+                </configuration>
+            </plugin>
+
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <version>3.8.1</version>
+                <executions>
+                    <execution>
+                        <id>compile</id>
+                        <phase>compile</phase>
+                        <goals>
+                            <goal>compile</goal>
+                        </goals>
+                    </execution>
+                    <execution>
+                        <id>testCompile</id>
+                        <phase>test-compile</phase>
+                        <goals>
+                            <goal>testCompile</goal>
+                        </goals>
+                    </execution>
+                </executions>
+                <configuration>
+                    <source>1.8</source>
+                    <target>1.8</target>
+                </configuration>
             </plugin>
         </plugins>
     </build>
