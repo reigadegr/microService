@@ -14,9 +14,15 @@ public class ProductController {
     @Autowired
     private ProductService productService;
 
-    @RequestMapping(value="/{id}",method= RequestMethod.GET)
-    public Product findById(@PathVariable Long id){
-        Product product = productService.findById(id);
-        return  product;
+    @RequestMapping(value = "/{id}", method = RequestMethod.GET)
+    public Product findById(@PathVariable Long id) {
+
+        try {
+            return productService.findById(id);
+        } catch (Exception e) {
+            System.out.println("有异常");
+        }
+
+        return null;
     }
 }
