@@ -4,8 +4,12 @@
   <groupId>huike</groupId>
   <artifactId>spring_cloud_demo</artifactId>
   <version>1.0-SNAPSHOT</version>
+  <packaging>pom</packaging>
   <name>Archetype - spring_cloud_demo</name>
   <url>http://maven.apache.org</url>
+  <modules>
+    <module>product_service</module>
+  </modules>
 
   <parent>
     <groupId>org.springframework.boot</groupId>
