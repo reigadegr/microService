@@ -11,7 +11,7 @@ import org.springframework.boot.autoconfigure.domain.EntityScan
 open class ProductApplication {
     companion object {
         @JvmStatic
- fun main(args: Array<String>) {
+        fun main(args: Array<String>) {
             println("Hello world!")
             val configurableApplicationContext: ConfigurableApplicationContext =
                 SpringApplication.run(ProductApplication::class.java, *args)

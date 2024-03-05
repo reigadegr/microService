@@ -5,16 +5,17 @@ import com.huike.product.service.ProductService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
-@RestController
 @RequestMapping("/product")
 //允许跨域访问
 @CrossOrigin(origins = "*")
+@RestController
 public class ProductController {
 
     @Autowired
     private ProductService productService;
 
     @RequestMapping(value = "/{id}", method = RequestMethod.GET)
+
     public Product findById(@PathVariable Long id) {
 
         try {
