@@ -31,7 +31,7 @@ CREATE TABLE `tb_product` (
   `caption` varchar(255) DEFAULT NULL COMMENT '标题',
   `inventory` int(11) DEFAULT NULL COMMENT '库存',
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -53,4 +53,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2024-03-05  8:47:57
+-- Dump completed on 2024-03-06 15:03:35
