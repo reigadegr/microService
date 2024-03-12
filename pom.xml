@@ -10,6 +10,7 @@
     <url>http://maven.apache.org</url>
     <modules>
         <module>product_service</module>
+        <module>order_sertvice</module>
     </modules>
 
     <parent>
