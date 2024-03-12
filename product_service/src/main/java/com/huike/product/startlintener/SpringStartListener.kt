@@ -22,7 +22,7 @@ import org.springframework.stereotype.Component
 class SpringStartListener : ApplicationListener<ApplicationReadyEvent> {
     override fun onApplicationEvent(event: ApplicationReadyEvent) {
         // Spring Boot应用程序已经完全启动
-        println("Spring Boot应用程序已经完全启动！")
+        println("Spring Boot应用程序-产品服务-已经完全启动！")
         println("http://127.0.0.1:9001/shop/product/2\n" +
                 "\n" +
                 "http://127.0.0.1:9001/shop/pm/2\n")
