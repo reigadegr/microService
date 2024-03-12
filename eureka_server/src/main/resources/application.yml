@@ -1,0 +1,11 @@
+server:
+  port: 9000 #端口
+#配置eureka server
+eureka:
+  instance:
+    hostname: localhost
+  client:
+    register-with-eureka: false #是否将自己注册到注册中心
+    fetch-registry: false #是否从eureka中获取注册信息
+    service-url: #配置暴露给Eureka Client的请求地址
+      defaultZone: http://127.0.0.1:9000/eureka/
