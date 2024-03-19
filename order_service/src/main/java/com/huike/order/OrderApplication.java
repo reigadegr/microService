@@ -8,7 +8,7 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.web.client.RestTemplate;
 
 @SpringBootApplication
-//@EntityScan("com.huike.order.entity")
+@EntityScan("com.huike.order.entity")
 
 public class OrderApplication {
     @LoadBalanced
