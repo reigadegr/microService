@@ -1,5 +1,5 @@
 server:
-  port: 9011 #端口
+  port: 9001 #端口
 spring:
   application:
     name: service-product #服务名称

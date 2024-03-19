@@ -6,7 +6,10 @@
   <component name="ChangeListManager">
     <list default="true" id="079e0ab9-f210-49bc-a242-4bcdb324e2df" name="Default Changelist" comment="Default Changelist">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/order_service/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/order_service/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/order_service/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/order_service/src/main/resources/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/product_service/src/main/java/com/huike/product/ProductApplication2.java" beforeDir="false" afterPath="$PROJECT_DIR$/product_service/src/main/java/com/huike/product/ProductApplication2.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/product_service/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/product_service/src/main/resources/application.yml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -125,6 +128,9 @@
     <option name="height" value="1018" />
   </component>
   <component name="ProjectId" id="2dtR63SG1XVgqYcoXh7lfaAyJXV" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="1" id="Add" />
+  </component>
   <component name="ProjectView">
     <navigator proportions="" version="1">
       <flattenPackages ProjectPane="false" />
@@ -283,6 +289,9 @@
       <recent name="D:\code\SpringClould\spring_cloud_demo\eureka_server\src\main\resources" />
       <recent name="D:\code\SpringClould\spring_cloud_demo\order_service\src\main\resources" />
     </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.huike.product" />
+    </key>
   </component>
   <component name="RunDashboard">
     <option name="configurationTypes">
@@ -363,7 +372,7 @@
       <workItem from="1709704465609" duration="211000" />
       <workItem from="1710220115641" duration="10309000" />
       <workItem from="1710825219497" duration="3625000" />
-      <workItem from="1710829254919" duration="1633000" />
+      <workItem from="1710829254919" duration="3088000" />
     </task>
     <servers />
   </component>
