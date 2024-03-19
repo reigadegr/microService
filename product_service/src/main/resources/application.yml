@@ -1,17 +1,20 @@
 server:
-  port: 9001
-  servlet:
-    context-path: /shop
-
+  port: 9001 #端口
 spring:
+  application:
+    name: service-product #服务名称
   datasource:
-    url: jdbc:mysql://localhost:3306/shop?characterEncoding=utf-8&serverTimezone=UTC&useSSL=false
     driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/shop?useUnicode=true&characterEncoding=utf8&serverTimezone=UTC
     username: root
     password: 1234
-  application:
-    name: product_service
   jpa:
     database: MySQL
     show-sql: true
     open-in-view: true
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:9000/eureka/
+  instance:
+    prefer-ip-address: true
