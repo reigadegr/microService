@@ -11,6 +11,7 @@ import java.math.BigDecimal;
 @Entity
 @Table(name = "tb_product")
 public class Product {
+
     @Id
     private Long id;
     private String productName;

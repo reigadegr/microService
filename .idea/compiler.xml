@@ -1,31 +1,23 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="CompilerConfiguration">
-    <excludeFromCompile>
-      <directory url="file://$PROJECT_DIR$/src/main/resources/archetype-resources" includeSubdirectories="true" />
-      <directory url="file://$PROJECT_DIR$/product_service/src/main/resources/archetype-resources" includeSubdirectories="true" />
-    </excludeFromCompile>
     <annotationProcessing>
-      <profile default="true" name="Default" enabled="true" />
       <profile name="Maven default annotation processors profile" enabled="true">
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="order_sertvice" />
         <module name="eureka_server" />
         <module name="product_service" />
+        <module name="order_service" />
       </profile>
     </annotationProcessing>
-    <bytecodeTargetLevel>
-      <module name="order_service" target="1.8" />
-    </bytecodeTargetLevel>
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
       <module name="eureka_server" options="-parameters" />
-      <module name="order_sertvice" options="-parameters" />
+      <module name="order_service" options="-parameters" />
       <module name="product_service" options="-parameters" />
-      <module name="spring_cloud_demo" options="-parameters" />
+      <module name="spring_cloud_demo" options="" />
     </option>
   </component>
 </project>
